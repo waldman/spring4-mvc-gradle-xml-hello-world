@@ -4,8 +4,8 @@ apply plugin: 'eclipse-wtp'
 apply plugin: 'jetty'
 
 // JDK 7
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenLocal()
@@ -45,3 +45,7 @@ eclipse {
   }
 }
 
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
